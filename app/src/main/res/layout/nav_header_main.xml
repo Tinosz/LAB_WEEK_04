@@ -11,4 +11,12 @@
     android:paddingEnd="16dp"
     android:paddingBottom="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="8dp"
+        app:srcCompat="@drawable/baseline_coffee_24" />
+
 </LinearLayout>
