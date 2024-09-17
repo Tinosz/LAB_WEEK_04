@@ -6,5 +6,6 @@
         android:title="@string/" />
     <item
         android:id="@+id/cafeFragment"
-        android:icon="@drawable/"
+        android:icon="@drawable/cafe"
+        android:title="@string/" />
 </menu>
