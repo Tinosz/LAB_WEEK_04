@@ -14,4 +14,6 @@
     <string name="iced_tea_desc">Iced tea is a form of cold tea. It may or may not be sweetened and is also a popular packaged drink. It can be mixed with flavored syrup with multiple common flavors including lemon, raspberry, lime, passion fruit, peach, orange, strawberry, and cherry.</string>
     <string name="water_title">WATER</string>
     <string name="water_desc">Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth\'s hydrosphere and the fluids of all known living organisms.</string>
+    <string name="bottom_menu_cafe">Cafe</string>
+    <string name="bottom_menu_coffee">Coffee\n</string>
 </resources>
