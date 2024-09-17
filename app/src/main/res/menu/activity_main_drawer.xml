@@ -7,7 +7,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/listFragment"
-            android:icon="@drawable/baseline_coffee_24"
+            android:icon="@drawable/coffee_menu"
             android:title="@string/menu_coffee" />
     </group>
 
@@ -16,7 +16,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/favoritesFragment"
-            android:icon="@drawable/baseline_favorite_24"
+            android:icon="@drawable/favorite_menu"
             android:title="@string/menu_favorite" />
     </group>
 
