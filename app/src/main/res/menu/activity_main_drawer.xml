@@ -7,7 +7,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/listFragment"
-            android:icon="@drawable/baseline_coffee_24"
+            android:icon="@drawable/coffee"
             android:title="@string/menu_coffee" />
     </group>
 
