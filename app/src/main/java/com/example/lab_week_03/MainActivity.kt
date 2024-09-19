@@ -1,64 +1,49 @@
 package com.example.lab_week_03
-
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.*
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
-interface CoffeeListener {
-    fun onSelected(id: Int)
-}
-
-class MainActivity : AppCompatActivity(), CoffeeListener {
+class MainActivity : AppCompatActivity() {
+    private lateinit var appBarConfiguration: AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.fragment_container)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        Log.d(TAG, "onCreate")
-    }
+        setSupportActionBar(findViewById(R.id.toolbar))
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+                as NavHostFragment
+        val navController = navHostFragment.navController
+        //Creating top level destinations
+        //and adding them to the draw
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.listFragment, R.id.favoritesFragment, R.id.cafeFragment
+            ), findViewById(R.id.drawer_layout)
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
-    override fun onSelected(id: Int) {
-        val navController = findNavController(R.id.fragment_container)
-        val bundle = Bundle().apply {
-            putInt(DetailFragment.COFFEE_ID, id)
-        }
-        navController.navigate(R.id.coffee_id_action, bundle)
-    }
+        findViewById<NavigationView>(R.id.nav_view)
+            ?.setupWithNavController(navController)
 
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG, "onStart")
-    }
+        findViewById<BottomNavigationView>(R.id.bottom_nav)
+            ?.setupWithNavController(navController)
 
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG, "onResume")
+//        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
+//        val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
+//        val adapter = CafeAdapter(supportFragmentManager, lifecycle)
+//        viewPager.adapter = adapter
+//        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+//            tab.text = resources.getString(TABS_FIXED[position])
+//        }.attach()
     }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG, "onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG, "onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, "onDestroy")
-    }
-
-    companion object {
-        private const val TAG = "MainActivity"
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

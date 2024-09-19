@@ -3,7 +3,7 @@
 
     <string name="app_title">Coffee App</string>
     <string name="nav_header_desc">Navigation Header</string>
-    
+
     <string name="menu_coffee">Coffee List</string>
     <string name="menu_favorite">Favorite Coffee</string>
 
@@ -23,4 +23,12 @@
     <string name="water_desc">Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth\'s hydrosphere and the fluids of all known living organisms.</string>
     <string name="bottom_menu_cafe">Cafe</string>
     <string name="bottom_menu_coffee">Coffee\n</string>
+
+    <string name="starbucks_title">STARBUCKS</string>
+    <string name="starbucks_desc">Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington. It is the world\'s largest coffeehouse chain.</string>
+    <string name="janjijiwa_title">JANJI JIWA</string>
+    <string name="janjijiwa_desc">It is undeniable that Janji Jiwa outlets have spread to various corners. Janji Jiwa is a local coffee brand that is popular among students, students, workers and even families. Carrying the jargon "coffee from the heart", Janji Jiwa is committed to serving coffee with a classic taste for coffee lovers.</string>
+    <string name="kopikenangan_title">KOPI KENANGAN</string>
+    <string name="kopikenangan_desc">At Kopi Kenangan, their dream is to serve high quality coffee, made with the freshest local ingredients to customers across Indonesia – and the rest of the world</string>
+
 </resources>
