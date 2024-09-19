@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".ListFragment"
+    android:padding="20dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +16,7 @@
             android:text="@string/coffee_list"/>
         <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1dp"
             android:layout_marginVertical="20dp"
             android:background="?android:attr/dividerVertical" />
         <TextView
@@ -25,31 +24,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/affogato_title" />
+            android:text="@string/affogato_title"/>
         <TextView
             android:id="@+id/americano"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/americano_title" />
+            android:text="@string/americano_title"/>
         <TextView
             android:id="@+id/latte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/latte_title" />
-        <TextView
-            android:id="@+id/iced_tea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="@string/iced_tea_title" />
-        <TextView
-            android:id="@+id/water"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="@string/water_title" />
+            android:text="@string/latte_title"/>
     </LinearLayout>
-
 </ScrollView>

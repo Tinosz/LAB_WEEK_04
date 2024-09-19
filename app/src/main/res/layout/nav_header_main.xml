@@ -5,19 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:background="@color/light_brown"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:paddingTop="16dp"
     android:paddingStart="16dp"
+    android:paddingTop="16dp"
     android:paddingEnd="16dp"
     android:paddingBottom="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-    
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="70dp"
         android:layout_height="100dp"
         android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="8dp"
-        app:srcCompat="@drawable/coffee_menu" />
-
-
+        android:paddingTop= "8dp"
+        app:srcCompat="@drawable/coffee" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop= "8dp"
+        android:text="@string/app_title"
+        android:textAppearance= "@style/TextAppearance.AppCompat.Body1" />
 </LinearLayout>
