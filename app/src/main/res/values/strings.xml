@@ -3,7 +3,7 @@
 
     <string name="app_title">Coffee App</string>
     <string name="nav_header_desc">Navigation Header</string>
-    
+
     <string name="menu_coffee">Coffee List</string>
     <string name="menu_favorite">Favorite Coffee</string>
 
